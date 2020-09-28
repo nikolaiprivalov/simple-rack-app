@@ -1,0 +1,25 @@
+# ./.rubocop.yml
+AllCops:
+  TargetRubyVersion: 2.7.1
+  NewCops: enable
+
+Metrics/LineLength:
+  Max: 90
+
+Metrics/BlockLength:
+  Exclude:
+    - ./spec/**/*_spec.rb
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - ./spec/**/*_spec.rb
+
+Lint/UnusedMethodArgument:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+

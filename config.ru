@@ -1,3 +1,9 @@
-require './app/hello_world'
+require 'pry'
 
+Dir['./app/**/*.rb'].sort.each { |f| require f }
+Dir['./middleware/**/*.rb'].sort.each { |f| require f }
+
+use Rack::Reloader, 0
+
+use StaticServer
 run HelloWorld.new
